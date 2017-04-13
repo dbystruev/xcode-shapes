@@ -4,6 +4,10 @@
 //
 //  Created by Denis Bystruev on 13/04/2017.
 //  Copyright © 2017 Denis Bystruev. All rights reserved.
+//  https://github.com/dbystruev
+//  http://learnSwift.ru
+//  https://github.com/dbystruev
+//  http://learnSwift.ru
 //
 
 import UIKit
@@ -16,6 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Show the main viewController from Swift Playgrounds
+        // Assigned to PlaygroundPage.current.liveView
+
+        let viewController = UIViewController()
+        viewController.view = Canvas.shared.backingView
+        // PlaygroundPage.current.liveView = viewController
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = viewController
+        self.window?.makeKeyAndVisible()
+
+        // Run the code from Swift Playgrounds
+        runCode()
+        
         return true
     }
 
