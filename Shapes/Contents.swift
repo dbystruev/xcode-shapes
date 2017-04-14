@@ -78,7 +78,7 @@ func runSwiftPlaygrounds() {
         line.color = .yellow
         
         // 4. Create text
-        let _ = Text(string: "Hello world!", fontSize: 32.0, fontName: "Futura", color: .red)
+        let text = Text(string: "Hello world!", fontSize: 32.0, fontName: "Futura", color: .red)
         
         // 5. Create an image
         let image = Image(name: "SwiftBird", tint: .green)
@@ -88,6 +88,7 @@ func runSwiftPlaygrounds() {
         
         // 6. Create a pattern with rectangles
         let numRectangles = 4
+        var rectangles : [Rectangle] = []
         var xOffset = Double((numRectangles/2) * (-1))
         var yOffset = -19.0
         let saturationEnd = 0.911
@@ -106,6 +107,8 @@ func runSwiftPlaygrounds() {
             rectangle.center = Point(x: xOffset, y: yOffset)
             xOffset += 1
             yOffset += 1
+            
+            rectangles.append(rectangle)
         }
         
         // create a Text object that, when tapped, will move to rotating line
@@ -118,15 +121,29 @@ func runSwiftPlaygrounds() {
         nextText.center.x += 2
         nextText.center.y -= 25
         
+        // clear the canvas
+        func clearCanvas() {
+            nextText.remove()
+            prevText.remove()
+            for i in (0 ..< rectangles.count).reversed() {
+                rectangles[i].remove()
+            }
+            image.remove()
+            text.remove()
+            line.remove()
+            rectangle.remove()
+            circle.remove()
+        }
+        
         // move to shape showcase when the "<" is tapped
         prevText.onTouchUp {
-            Canvas.shared.clear()
+            clearCanvas()
             rotatingLine()
         }
         
         // move to draggable circle when the ">" is tapped
         nextText.onTouchUp {
-            Canvas.shared.clear()
+            clearCanvas()
             draggableCircle()
         }
     }
@@ -179,3 +196,6 @@ func runSwiftPlaygrounds() {
     // Start with rotating line
     rotatingLine()
 }
+
+// This should be commented in Xcode
+//runSwiftPlaygrounds()
