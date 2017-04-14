@@ -50,7 +50,7 @@ func runSwiftPlaygrounds() {
             }
         }
         
-        // move to shape shocase when the ">" is tapped
+        // move forward to shape showcase when the ">" is tapped
         nextText.onTouchUp {
             nextText.remove()
             rotateCounterClockwiseText.remove()
@@ -135,13 +135,13 @@ func runSwiftPlaygrounds() {
             circle.remove()
         }
         
-        // move to shape showcase when the "<" is tapped
+        // move back to rotating line when the "<" is tapped
         prevText.onTouchUp {
             clearCanvas()
             rotatingLine()
         }
         
-        // move to draggable circle when the ">" is tapped
+        // move forward to draggable circle when the ">" is tapped
         nextText.onTouchUp {
             clearCanvas()
             draggableCircle()
@@ -177,7 +177,7 @@ func runSwiftPlaygrounds() {
         let prevText = Text(string: "<", fontSize: 50, color: .blue)
         prevText.center.y -= 25
         
-        // move to shape showcase when the "<" is tapped
+        // move back to shape showcase when the "<" is tapped
         prevText.onTouchUp {
             prevText.remove()
             circle.remove()
