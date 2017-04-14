@@ -6,8 +6,6 @@
 //  Copyright © 2017 Denis Bystruev. All rights reserved.
 //  https://github.com/dbystruev
 //  http://learnSwift.ru
-//  https://github.com/dbystruev
-//  http://learnSwift.ru
 //
 
 import UIKit
@@ -22,18 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Show the main viewController from Swift Playgrounds
-        // Assigned to PlaygroundPage.current.liveView
-
+        // Originally assigned to PlaygroundPage.current.liveView
         let viewController = UIViewController()
         viewController.view = Canvas.shared.backingView
-        // PlaygroundPage.current.liveView = viewController
         
+        // Lines below replace PlaygroundPage.current.liveView = viewController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
 
-        // Run the code from Swift Playgrounds
-        runCode()
+        // Run the code from Contents.swift
+        runSwiftPlaygrounds()
         
         return true
     }

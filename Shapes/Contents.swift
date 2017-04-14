@@ -11,9 +11,9 @@
 //  — Shapes template in Swift Playgrounds for iPad by Apple
 //  — Converted Playgroundbooks by Kush Taneja (https://github.com/kushtaneja)
 
-// Put inside this function any code derived from Shapes template
-// developed in Swift Playgrounds for iPad
-func runCode() {
+// Put any code developed for Shapes template
+// from Swift Playgrounds for iPad into this function
+func runSwiftPlaygrounds() {
     
     // Show a line with two controlling text labels to rotate it
     func rotatingLine() {
@@ -35,15 +35,15 @@ func runCode() {
         // create a Text object that, when tapped, will move to shape showcase
         let nextText = Text(string: ">", fontSize: 50, color: .blue)
         nextText.center.y -= 25
-
-        // roate the line clockwise with animation when the "Rotate Line Clockwise" text is tapped.
+        
+        // rotate the line clockwise with animation when the "Rotate Line Clockwise" text is tapped.
         rotateClockwiseText.onTouchUp {
             animate {
                 line.rotation += .pi/4
             }
         }
         
-        // roate the line counter clockwise with animation when the "Rotate Line Counter Clockwise" text is tapped.
+        // rotate the line counter clockwise with animation when the "Rotate Line Counter Clockwise" text is tapped.
         rotateCounterClockwiseText.onTouchUp {
             animate {
                 line.rotation -= .pi/4
@@ -74,7 +74,7 @@ func runCode() {
         // 3. Create a line
         let line = Line(start: Point(x: -10, y: 9), end: Point(x: 10, y: 9), thickness: 0.5)
         line.center.y -= 2
-        line.rotation = 170 * (3.14159/180)
+        line.rotation = 170 * (.pi/180)
         line.color = .yellow
         
         // 4. Create text
@@ -123,7 +123,7 @@ func runCode() {
             Canvas.shared.clear()
             rotatingLine()
         }
-
+        
         // move to draggable circle when the ">" is tapped
         nextText.onTouchUp {
             Canvas.shared.clear()
@@ -168,11 +168,11 @@ func runCode() {
         }
     }
     
-/*
-    // Find out visible screen's width and height in virtual units
-    let width = Canvas.shared.visibleSize.width
-    let heigth = Canvas.shared.visibleSize.height
-*/
+    /*
+     // Find out visible screen's width and height in virtual units
+     let width = Canvas.shared.visibleSize.width
+     let heigth = Canvas.shared.visibleSize.height
+     */
     // Make the backgound white
     Canvas.shared.color = .white
     
