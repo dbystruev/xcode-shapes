@@ -4,10 +4,11 @@ Xcode project for building apps derived from Shapes template from Swift Playgrou
 ![Shapes template output](https://github.com/dbystruev/xcode-shapes/blob/master/Resources/xcode-shapes.png)
 ## Instructions
 1. In Swift Playgrounds for iPad, start new playgroundbook (by pressing "+") and select Shapes template.
-1. Design your code by editing exisiting page or adding a new page with the code.
-1. After you are happy, copy the code by any means to Mac so that you can have access to it from Xcode.
+1. Design your program by editing existing page or adding code to a new page.
+1. After you are done, press three dots in the top right corner and create PDF with your code.
+1. AirDrop created PDF to Mac or send it by any other means (iCloud, Mail, etc.)
 1. In Xcode for Mac, open the xcode-shapes project (Shapes.xcodeproj).
-1. Insert the code you copied on step 3 into runSwiftPlaygrounds() function inside Contents.swift file replacing everything in it.
+1. Copy the code from PDF you created on step 3 into runSwiftPlaygrounds() function inside Contents.swift file replacing everything in it.
 1. Try to build and run your app.  If something does not work, try compiling the original code in runSwiftPlaygrounds() first.
 ## Copyright notice
 This work is based on the code derived from:
