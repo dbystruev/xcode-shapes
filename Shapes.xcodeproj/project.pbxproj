@@ -26,7 +26,6 @@
 		6910D0B01EA011A40096A7A1 /* TouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6910D0A01EA011A40096A7A1 /* TouchGestureRecognizer.swift */; };
 		6910D0B51EA011BC0096A7A1 /* Shapes.png in Resources */ = {isa = PBXBuildFile; fileRef = 6910D0B31EA011BC0096A7A1 /* Shapes.png */; };
 		6910D0B61EA011BC0096A7A1 /* SwiftBird.png in Resources */ = {isa = PBXBuildFile; fileRef = 6910D0B41EA011BC0096A7A1 /* SwiftBird.png */; };
-		699757191EA08E7D001AE584 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 699757181EA08E7D001AE584 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +50,6 @@
 		6910D0A01EA011A40096A7A1 /* TouchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		6910D0B31EA011BC0096A7A1 /* Shapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shapes.png; sourceTree = "<group>"; };
 		6910D0B41EA011BC0096A7A1 /* SwiftBird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwiftBird.png; sourceTree = "<group>"; };
-		699757181EA08E7D001AE584 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				6910D0551EA004B00096A7A1 /* Shapes */,
-				699757181EA08E7D001AE584 /* README.md */,
 				6910D0541EA004B00096A7A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -218,7 +215,6 @@
 				6910D0901EA009D10096A7A1 /* Contents.swift in Sources */,
 				6910D0A51EA011A40096A7A1 /* Canvas.swift in Sources */,
 				6910D0AE1EA011A40096A7A1 /* Size.swift in Sources */,
-				699757191EA08E7D001AE584 /* README.md in Sources */,
 				6910D0AD1EA011A40096A7A1 /* Shadow.swift in Sources */,
 				6910D0AB1EA011A40096A7A1 /* Point.swift in Sources */,
 				6910D0A41EA011A40096A7A1 /* AbstractShape.swift in Sources */,
@@ -334,6 +330,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.Shapes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "-D DEBUG";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -347,6 +344,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.Shapes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "-D RELEASE";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
