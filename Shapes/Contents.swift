@@ -2,7 +2,7 @@
 //  Contents.swift
 //  Shapes
 //
-//  Created by Denis Bystruev on 13/04/2017.
+//  Started by Denis Bystruev on 13/04/2017.
 //  Copyright © 2017 Denis Bystruev. All rights reserved.
 //  https://github.com/dbystruev
 //  http://learnSwift.ru
@@ -11,9 +11,42 @@
 //  — Shapes template in Swift Playgrounds for iPad by Apple
 //  — Converted Playgroundbooks by Kush Taneja (https://github.com/kushtaneja)
 
-// Put any code developed for Shapes template
-// from Swift Playgrounds for iPad into this function
-func runSwiftPlaygrounds() {
+#if !DEBUG && !RELEASE
+    // This code runs in Swift Playgrounds for iPad
+    import PlaygroundSupport
+    let _ = SwiftPlaygrounds()
+#endif
+
+// Any code developed for Shapes template
+// for Swift Playgrounds for iPad goes into this run() function of this class
+class SwiftPlaygrounds {
+    let view = Canvas.shared.backingView
+    
+    // The code to start with
+    init() {
+        #if !DEBUG && !RELEASE
+            // This code runs in Swift Playgrounds for iPad
+            PlaygroundPage.current.liveView = self.view
+            run()
+        #endif
+    }
+    
+    // The code to run
+    func run() {
+        #if DEBUG
+            // This code runs during DEBUG in Xcode
+            // Find out visible screen's width and height in virtual units
+            let width = Canvas.shared.visibleSize.width
+            let heigth = Canvas.shared.visibleSize.height
+            print("width = \(width), heigth = \(heigth)")
+        #endif
+        
+        // Make the backgound white
+        Canvas.shared.color = .white
+        
+        // Start with rotating line
+        rotatingLine()
+    }
     
     // Show a line with two controlling text labels to rotate it
     func rotatingLine() {
@@ -56,7 +89,7 @@ func runSwiftPlaygrounds() {
             rotateCounterClockwiseText.remove()
             rotateClockwiseText.remove()
             line.remove()
-            shapeShowcase()
+            self.shapeShowcase()
         }
     }
     
@@ -138,13 +171,13 @@ func runSwiftPlaygrounds() {
         // move back to rotating line when the "<" is tapped
         prevText.onTouchUp {
             clearCanvas()
-            rotatingLine()
+            self.rotatingLine()
         }
         
         // move forward to draggable circle when the ">" is tapped
         nextText.onTouchUp {
             clearCanvas()
-            draggableCircle()
+            self.draggableCircle()
         }
     }
     
@@ -181,21 +214,7 @@ func runSwiftPlaygrounds() {
         prevText.onTouchUp {
             prevText.remove()
             circle.remove()
-            shapeShowcase()
+            self.shapeShowcase()
         }
     }
-    
-    /*
-     // Find out visible screen's width and height in virtual units
-     let width = Canvas.shared.visibleSize.width
-     let heigth = Canvas.shared.visibleSize.height
-     */
-    // Make the backgound white
-    Canvas.shared.color = .white
-    
-    // Start with rotating line
-    rotatingLine()
 }
-
-// This should be commented in Xcode
-//runSwiftPlaygrounds()
