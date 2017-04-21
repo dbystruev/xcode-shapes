@@ -11,22 +11,18 @@
 //  — Shapes template in Swift Playgrounds for iPad by Apple
 //  — Converted Playgroundbooks by Kush Taneja (https://github.com/kushtaneja)
 
-#if !DEBUG && !RELEASE
-    // This code runs in Swift Playgrounds for iPad
-    import PlaygroundSupport
-    let _ = SwiftPlaygrounds()
-#endif
-
 // Any code developed for Shapes template
 // for Swift Playgrounds for iPad goes into this run() function of this class
 class SwiftPlaygrounds {
+    #if DEBUG || RELEASE
+    // This code runs during DEBUG or RELEASE in Xcode
     let view = Canvas.shared.backingView
+    #endif
     
     // The code to start with
     init() {
         #if !DEBUG && !RELEASE
             // This code runs in Swift Playgrounds for iPad
-            PlaygroundPage.current.liveView = self.view
             run()
         #endif
     }
@@ -218,3 +214,9 @@ class SwiftPlaygrounds {
         }
     }
 }
+
+#if !DEBUG && !RELEASE
+    // This code runs in Swift Playgrounds for iPad
+    import PlaygroundSupport
+    let _ = SwiftPlaygrounds()
+#endif
