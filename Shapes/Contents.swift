@@ -21,7 +21,11 @@ class SwiftPlaygrounds {
     
     // The code to start with
     init() {
-        #if !DEBUG && !RELEASE
+        #if DEBUG || RELEASE
+            // This code runs in Xcode for Mac
+            // Make the backgound white
+            Canvas.shared.color = .white
+        #else
             // This code runs in Swift Playgrounds for iPad
             run()
         #endif
@@ -36,9 +40,6 @@ class SwiftPlaygrounds {
             let heigth = Canvas.shared.visibleSize.height
             print("width = \(width), heigth = \(heigth)")
         #endif
-        
-        // Make the backgound white
-        Canvas.shared.color = .white
         
         // Start with rotating line
         rotatingLine()
