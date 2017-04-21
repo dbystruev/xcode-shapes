@@ -6,7 +6,7 @@ Xcode project for building apps using Shapes template in Swift Playgrounds for i
 1. In Swift Playgrounds for iPad, start new playgroundbook (by pressing "+") and select Shapes template.
 1. Design, test, and run your program as normal, all within one page.
 1. After you are done, you need to copy the code from iPad to Mac.  Please note that "Create PDF" feature in Swift Playgrounds creates an image-based file without text information, so it is impossible to copy and paste text from it.  On Mac, open the xcode-shapes project (Shapes.xcodeproj) with Xcode.  On iPad, select all code in Swift Playgrounds, copy it and paste:
-   * directly to Xcode for Mac into runSwiftPlaygrounds() function located inside Shapes/Contents.swift file, if you have [Universal Clipboard](https://support.apple.com/kb/PH25168) turned on, OR
+   * directly to Xcode for Mac into run() function of SwiftPlaygrounds() class located inside Shapes/Contents.swift file, if you have [Universal Clipboard](https://support.apple.com/kb/PH25168) turned on, OR
    * to some 3rd place, like [GitHubGist](https://gist.github.com), where you can access the code from your Mac
 1. If you added any images or other files into your code on iPad, you need to add the same files into Resources folder in xcode-shapes project (Shapes.xcodeproj) on Mac
 1. Try to build and run your app.  If something does not work, try compiling the original code in runSwiftPlaygrounds() first.
