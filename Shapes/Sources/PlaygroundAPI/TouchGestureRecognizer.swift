@@ -7,7 +7,7 @@ import UIKit
 
 internal class TouchGestureRecognizer: UIGestureRecognizer, UIGestureRecognizerDelegate {
 
-    internal var currentTouches = Set<UITouch>()
+    @objc internal var currentTouches = Set<UITouch>()
     
     internal weak var touchDelegate: TouchGestureRecognizerDelegate?
     

@@ -5,7 +5,7 @@
 
 import UIKit
 
-private let DefaultFontSize = 17.0
+public let DefaultFontSize = 17.0
 
 /// Text on the canvas.
 ///

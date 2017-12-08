@@ -43,7 +43,7 @@ internal class GridView: UIView {
     
     internal var offsetToCenterInScreenPoints = Point(x: 0, y: 0)
     
-    internal var gridStrideInPoints = 10.0
+    @objc internal var gridStrideInPoints = 10.0
     
     fileprivate var majorGridColor = Color(white: 0.85, alpha: 1.0) {
         didSet {
