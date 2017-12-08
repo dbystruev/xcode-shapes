@@ -163,7 +163,7 @@
 				TargetAttributes = {
 					6910D0521EA004B00096A7A1 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 8J39KF9DMS;
+						DevelopmentTeam = M326LH9Q2Q;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -325,12 +325,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				DEVELOPMENT_TEAM = M326LH9Q2Q;
 				INFOPLIST_FILE = Shapes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.Shapes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "-D DEBUG";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = DEBUG;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -339,12 +339,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8J39KF9DMS;
+				DEVELOPMENT_TEAM = M326LH9Q2Q;
 				INFOPLIST_FILE = Shapes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.learnSwift.Shapes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = "-D RELEASE";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS[arch=*]" = RELEASE;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

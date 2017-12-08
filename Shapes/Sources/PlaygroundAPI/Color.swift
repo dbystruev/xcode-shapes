@@ -51,7 +51,7 @@ public class Color: _ExpressibleByColorLiteral, Equatable {
         self.uiColor = uiColor
     }
     
-    public required convenience init(colorLiteralRed red: Float, green: Float, blue: Float, alpha: Float) {
+    public required convenience init(_colorLiteralRed red: Float, green: Float, blue: Float, alpha: Float) {
         self.init(red: Double(red), green: Double(green), blue: Double(blue), alpha: Double(alpha))
     }
  
