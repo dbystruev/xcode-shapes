@@ -85,7 +85,7 @@ public class Color: _ExpressibleByColorLiteral, Equatable {
     ///   - `1.0` is the brightest setting
     private func withBrightness(percent: Double) -> Color {
         var cappedPercent = min(percent, 1.0)
-        cappedPercent = max(0.0, percent)
+        cappedPercent = max(0.0, cappedPercent)
         
         var hue: CGFloat = 0.0
         var saturation: CGFloat = 0.0
