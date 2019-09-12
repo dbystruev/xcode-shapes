@@ -64,11 +64,3 @@ public class Rectangle: Shape {
     }
 
 }
-
-extension Rectangle: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        get {
-            return .text("Width = \(size.width), height = \(size.height)")
-        }
-    }
-}

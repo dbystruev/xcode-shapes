@@ -50,11 +50,3 @@ public class Circle: Shape {
         backingView.layer.cornerRadius = backingView.frame.width/2.0
     }
 }
-
-extension Circle: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        get {
-            return .text("Radius = \(radius)")
-        }
-    }
-}

@@ -102,11 +102,3 @@ public class Line: Shape {
         return CGAffineTransform(rotationAngle: CGFloat(radians))
     }
 }
-
-extension Line: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        get {
-            return .text("Length = \(distanceBetween(start: start, end: end))")
-        }
-    }
-}

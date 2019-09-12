@@ -100,11 +100,3 @@ public class Text: AbstractDrawable {
         udpateBackingViewSizeFromScreenSize(screenSize: Size(preferredSize))
     }
 }
-
-extension Text: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        get {
-            return .text(string)
-        }
-    }
-}

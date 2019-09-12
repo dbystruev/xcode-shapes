@@ -187,7 +187,7 @@ extension AbstractDrawable: TouchGestureRecognizerDelegate {
         if (draggable) {
             // Bring the shape to the front.
             if let superview = self.backingView.superview {
-                superview.bringSubview(toFront: self.backingView)
+                superview.bringSubviewToFront(self.backingView)
             }
             
             animate {

@@ -36,11 +36,3 @@ public struct Point {
     }
     
 }
-
-extension Point: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        get {
-            return .text("x = \(x), y = \(y)")
-        }
-    }
-}

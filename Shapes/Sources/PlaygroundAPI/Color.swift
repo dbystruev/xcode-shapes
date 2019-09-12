@@ -114,11 +114,3 @@ public typealias _ColorLiteralType = Color
 public func ==(left: Color, right: Color) -> Bool {
     return left.uiColor == right.uiColor
 }
-
-extension Color: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        get {
-            return .color(uiColor)
-        }
-    }
-}

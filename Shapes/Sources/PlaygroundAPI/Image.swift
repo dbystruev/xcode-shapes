@@ -64,7 +64,7 @@ public class Image: AbstractDrawable {
             return Color(uiColor:backingViewAsImageView.tintColor)
         }
         set {
-            let renderingMode: UIImageRenderingMode = newValue == nil ? .alwaysOriginal : .alwaysTemplate
+            let renderingMode: UIImage.RenderingMode = newValue == nil ? .alwaysOriginal : .alwaysTemplate
             backingViewAsImageView.image = backingViewAsImageView.image?.withRenderingMode(renderingMode)
             backingViewAsImageView.tintColor = newValue?.uiColor
         }
@@ -145,12 +145,4 @@ public enum ImageContentMode {
     case scaleAndStretchToFill
     /// Only scale and don't stretch the image when its natural size doesn't match the size it is being set to.
     case scaleToFitMaintainingAspectRatio
-}
-
-extension Image: CustomPlaygroundQuickLookable {
-    public var customPlaygroundQuickLook: PlaygroundQuickLook {
-        get {
-            return .text("Width \(size.width), height = \(size.height)")
-        }
-    }
 }

@@ -20,7 +20,7 @@ internal class Grid {
             return backingView.majorGridColor
         }
         set {
-            backingView.minorGridColor = majorGridColor
+            backingView.minorGridColor = newValue
         }
     }
     
@@ -29,7 +29,7 @@ internal class Grid {
             return backingView.minorGridColor
         }
         set {
-            backingView.minorGridColor = minorGridColor
+            backingView.minorGridColor = newValue
         }
     }
     
