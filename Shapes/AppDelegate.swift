@@ -19,18 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Initialize the code in Contents.swift
-        let swiftPlaygrounds = SwiftPlaygrounds()
+        let contents = Contents()
 
         // Show the main viewController from Swift Playgrounds
         // Originally assigned to PlaygroundPage.current.liveView
         let viewController = UIViewController()
-        viewController.view = swiftPlaygrounds.view
+        viewController.view = contents.view
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
 
         // Run the code from Contents.swift
-        swiftPlaygrounds.run()
+        contents.run()
         
         return true
     }

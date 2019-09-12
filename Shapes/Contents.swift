@@ -13,7 +13,7 @@
 
 // Any code developed for Shapes template
 // for Swift Playgrounds for iPad goes into this run() function of this class
-class SwiftPlaygrounds {
+class Contents {
     #if DEBUG || RELEASE
     // This code runs during DEBUG or RELEASE in Xcode
     let view = Canvas.shared.backingView
