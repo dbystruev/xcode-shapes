@@ -19,7 +19,9 @@ This work is based on the code derived from:
 
 You can use this work freely if not prohibited by your local laws.
 
-Started by [Denis Bystruev](https://github.com/dbystruev/) from [learnSwift.ru](http://learnSwift.ru) on 13th of April 2017.
-Updated to Xcode 9 and Swift 4 on 8th of December 2017.
+## Timeline
+* Started by [Denis Bystruev](https://github.com/dbystruev/) from [learnSwift.ru](http://learnSwift.ru) on 13th of April 2017.
+* Updated to Xcode 9 and Swift 4 on 8th of December 2017.
+* Updated to Xcode 11 and Swift 5 on 12th of September 2019.
 
 Feel free to contract me via e-mail in [my GitHub profile](https://github.com/dbystruev/).
